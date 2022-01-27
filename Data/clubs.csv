@@ -1,0 +1,13 @@
+id,country,name,zone_id,saas,status
+875d32df-3dea-4cf4,Italy,Padel Elite Top Club,Europe/Rome,ANEMONE,ACTIVE
+875d33df-3dea-4df4,Italy,Padel Center,Europe/Rome,ANEMONE,ACTIVE
+da7cb23b-43b3-11e8,Spain,Europadel,Europe/Madrid,ANEMONE,ACTIVE
+da7cb22b-43b3-11e8,Spain,Centro Padel,Europe/Madrid,ANEMONE,ACTIVE
+a328d271-7036-47b4,Denmark,World of Padel,Europe/Copenhagen,ANEMONE,ACTIVE
+cc3b6516-7bfc-4504,Denmark,Padel Box,Europe/Copenhagen,ANEMONE,ACTIVE
+da79175c-43b3-11e8,Spain,Pádel Madrid,Europe/Madrid,SYLTEKCRM,ACTIVE
+da78dd3c-43b3-11e8,Spain,Pádel Club,Europe/Madrid,SYLTEKCRM,ACTIVE
+a7cde49f-630d-41eb,España,Pádel Club,Europe/Madrid,SYLTEKCRM,ACTIVE
+da76cbee-43b3-11e8,Spain,Padel Indoor,Europe/Madrid,SYLTEKCRM,ACTIVE
+98e6583b-0ba1-4f15,Belgium,Pro Padel Point,Europe/Brussels,SYLTEKCRM,ACTIVE
+bc8152b7-f04e-450e,Mexico,Club el Padelito,America/Mexico_City,SYLTEKCRM,ACTIVE
