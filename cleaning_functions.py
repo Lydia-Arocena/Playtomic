@@ -69,3 +69,22 @@ def get_users(matches_list):
     users=pd.DataFrame(dicc)
     
     return users
+
+def get_country(city):
+    """
+    This function returns a country given a city.
+    Args: city (string)
+    Return: country (string).
+    """
+    Spain = ["Alcorcón", "Barakaldo", "Madrid"]
+    Denmark = ["Ikast", "Odense"]
+    if city in Spain:
+        return "Spain"
+    elif city in Denmark:
+        return "Denmark"
+    elif city == "Cuajimalpa":
+        return "Mexico"
+    elif city == "Edegem":
+        return "Belgium"
+    else:
+        return "Italy"
