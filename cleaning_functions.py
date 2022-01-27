@@ -17,6 +17,7 @@ def get_infoclub(matches_list):
         dicc['Latitud'].append(matches_list[i]['club_info'][0]['coordinate_geo']['coordinates'][1]) #lat
         dicc['Longitud'].append(matches_list[i]['club_info'][0]['coordinate_geo']['coordinates'][0]) #lng
     clubs_info=pd.DataFrame(dicc)
+    
     return clubs_info
 
 
@@ -26,22 +27,23 @@ def map(matches_list):
     Args: matches_list (list)
     Return: Folium map.
     """
-    clubs_info=get_infoclub(matches_list)
+    clubs= get_infoclub(matches_list)
+    clubs_info= clubs.drop_duplicates()
     
-    map_club = Map(location = [40.4994927, -3.7131068], zoom_start = 15)
+    map_club = Map(location = [40.4994927, -3.7131068], zoom_start = 2)
     for i,row in clubs_info.iterrows():
         dicc = {"location": [row["Latitud"], row["Longitud"]], "tooltip": row["club_name"]}
         
         if row["city"] == 'Madrid':
             icono = Icon(color = "green",
                         prefix="fa",
-                        icon="thumbs-o-up",
+                        icon="star",
                         icon_color="black"
             )
         elif row["city"] != 'Madrid':
             icono = Icon(color = "orange",
                         prefix="fa",
-                        icon="hand-o-right",
+                        icon="star",
                         icon_color="black")
             
             
@@ -49,3 +51,21 @@ def map(matches_list):
         mark.add_to(map_club)
             
     return map_club
+
+
+def get_users(matches_list):
+    """
+    This function transform a json into a df.
+    Args: matches_list (list)
+    Return: df.
+    """
+
+    dicc={"user_id":[], "registration_date":[],"price":[], "currency":[]}
+    for i in range (len(matches_list)):
+        dicc['user_id'].append(matches_list[i]["registered_users"][0]['user_id']) 
+        dicc['registration_date'].append(matches_list[i]["registered_users"][0]['registration_date']) 
+        dicc['price'].append(matches_list[i]["registered_users"][0]['price']["amount"]) 
+        dicc['currency'].append(matches_list[i]["registered_users"][0]['price']["currency"])
+    users=pd.DataFrame(dicc)
+    
+    return users
