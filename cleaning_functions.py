@@ -88,3 +88,21 @@ def get_country(city):
         return "Belgium"
     else:
         return "Italy"
+
+
+def get_year(date):
+    """
+    This function returns a year given a date and time.
+    Args: date (string)
+    Return: year (string).
+    """
+    return date.split("-")[0]
+
+
+def get_month(date):
+    """
+    This function returns a month given a date and time.
+    Args: date (string)
+    Return: month (string).
+    """
+    return date.split("-")[1]
